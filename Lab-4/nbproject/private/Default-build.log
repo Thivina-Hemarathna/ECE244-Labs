@@ -1,0 +1,20 @@
+g++ -std=c++11 -c -g main.cpp Customer.h QueueList.h Register.h RegisterList.h
+main.cpp: In function ‘void addCustomer(std::stringstream&, std::__cxx11::string)’:
+main.cpp:115:27: error: ‘createCustomer’ was not declared in this scope
+   Customer* newCustomer = createCustomer(timeElapsed, items);
+                           ^~~~~~~~~~~~~~
+main.cpp:115:27: note: suggested alternative: ‘newCustomer’
+   Customer* newCustomer = createCustomer(timeElapsed, items);
+                           ^~~~~~~~~~~~~~
+                           newCustomer
+main.cpp:119:21: error: request for member ‘enqueue’ in ‘singleQueue’, which is of pointer type ‘QueueList*’ (maybe you meant to use ‘->’ ?)
+         singleQueue.enqueue(newCustomer);
+                     ^~~~~~~
+main.cpp:122:38: error: ‘get_min_items_register’ was not declared in this scope
+         Register* minItemsRegister = get_min_items_register();
+                                      ^~~~~~~~~~~~~~~~~~~~~~
+main.cpp:122:38: note: suggested alternative: ‘minItemsRegister’
+         Register* minItemsRegister = get_min_items_register();
+                                      ^~~~~~~~~~~~~~~~~~~~~~
+                                      minItemsRegister
+gmake: *** [Makefile:7: main.o] Error 1

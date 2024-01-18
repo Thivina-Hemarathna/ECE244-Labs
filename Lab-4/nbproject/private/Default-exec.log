@@ -1,0 +1,12 @@
+called: g++
+	/u/c/hemarath/Documents/ECE244Two/lab4
+	g++
+	-std=c++11
+	-c
+	-g
+	main.cpp
+	Customer.h
+	QueueList.h
+	Register.h
+	RegisterList.h
+
